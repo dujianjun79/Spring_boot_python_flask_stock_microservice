@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>student grades input page</title>
+</head>
+<body>
+<form role="form" th:action="@{/recordPage}" th:method="post" th:object="${student}">
+    <lable>Name</lable>
+    <input type="text" th:field="*{name}">
+
+    <lable>Math Grade</lable>
+    <input type="number"  step=0.01 th:field="*{mathGrade}">
+
+    <lable>English Grade</lable>
+    <input type="number" step=0.01 th:field="*{englishGrade}">
+
+    <lable>History Grade</lable>
+    <input type="number" step=0.01 th:field="*{historyGrade}">
+
+    <lable>Science Grade</lable>
+    <input type="number" step=0.01 th:field="*{scienceGrade}">
+
+    <input type="submit">
+</form>
+</body>
+</html>

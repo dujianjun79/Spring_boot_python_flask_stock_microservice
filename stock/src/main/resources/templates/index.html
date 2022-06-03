@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>welcome</h1>
+<a href="car/3/owner/lisa">car/{id}/owner/{username}</a>
+
+<form th:action="@{/save}" th:object="${loginForm}" method="post">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" autofocus="autofocus"/>
+
+    <label for="password">password</label>
+    <input type="text" id="password" name="password" />
+    <br/>
+    <input type="submit" value="log in">
+</form>
+<p th:text="${stick}">subject</p>
+</body>
+</html>
